@@ -24,7 +24,8 @@ class ProxyListener implements Listener{
 				$player->transfer($server, 19132);
 				return;
 			}else{
-				$player->kick("null", TextFormat::colorize($this->plugin->getConfig()->get("Kick-Message")));
+				$player->close("", TextFormat::colorize($this->plugin->getConfig()->get("Kick-Message")));
+				return;
 			}
 		}
 	}
